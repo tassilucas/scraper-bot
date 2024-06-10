@@ -205,12 +205,13 @@ def dump_database():
     for r in res:
         print(r)
 
-setup_database()
-#search_items()
 
-while True:
-    print("Mudanças encontradas:")
-    search_items()
-    time.sleep(1 * 60)
+if __name__ == '__main__':
+    setup_database()
 
-con.close()
+    while True:
+        print("Mudanças encontradas:")
+        search_items()
+        time.sleep(1 * 60)
+    con.close()
+
